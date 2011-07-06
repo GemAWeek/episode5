@@ -1,0 +1,27 @@
+@import "reset.css";
+@import "grid960.css";
+@import "type.css";
+@import "helpers.css";
+@import "forms.css";
+@import "tables.css";
+@import "ux.css";
+
+.semantic-navigation {
+  list-style-type: none;
+  margin-left: 10px;
+}
+.semantic-navigation .with-group ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+.highlighted a {
+  color: #789b10;
+}
+.with-group span {
+  color: #1475a2;
+}
+.with-group span:hover {
+  color: #789b10;
+  cursor: pointer;
+}

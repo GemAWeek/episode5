@@ -1,0 +1,8 @@
+<% unless @posts.nil? %>
+  <% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <aside>Created <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %></aside>
+    <br />
+    <p><%= truncate(post.body, :length => 500) %></p>
+  <% end %>
+<% end %>

@@ -1,0 +1,14 @@
+<% semantic_navigation :main, html: { class: 'primary' } do |n| %>
+  <%= n.item 'Home', link: root_path,
+    disabled_if: proc {request.path == '/'} %>
+  <%= n.group 'Posts' do %>
+    <%= n.item 'All Posts', link: posts_path,
+      disabled_if: proc {request.path == '/posts'} %>
+    <%= n.item 'New Post', link: new_post_path, 
+      disabled_if: proc {request.path == '/posts/new'} %>
+  <% end %>
+  <%= n.item 'About',
+    disabled_if: proc {request.path == '/about'}%>
+  <%= n.item 'Contact', link: contact_path,
+    disabled_if: proc {request.path == '/contact'} %>
+<% end %>

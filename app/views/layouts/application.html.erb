@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GemaweekBase</title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'formtastic' %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='header' class='full'>
+        <h1>GemAWeek</h1>
+        <% if notice %>
+          <p class='success'><%= notice %></p>
+        <% elsif alert %>
+          <p class='error'><%= alert %></p>
+        <% end %>
+      </div>
+      <div class='quarter first'>
+        <%= render 'layouts/sidebar' %>
+      </div>
+      <div class='threequarter last' %>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

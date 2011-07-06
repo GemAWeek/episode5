@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: My First Post
+  body: First post body text.
+
+two:
+  title: My Second Post
+  body: Second post body text.
